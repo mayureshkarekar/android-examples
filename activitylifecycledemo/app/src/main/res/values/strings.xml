@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ActivityLifecycleDemo</string>
+    <string name="open_activity_1">Open Activity 1</string>
+    <string name="open_activity_2">Open Activity 2</string>
+    <string name="open_activity_3">Open Activity 3</string>
+    <string name="open_activity_4">Open Activity 4</string>
+    <string name="open_activity_5">Open Activity 5</string>
+    <string name="open_activity_6">Open Activity 6</string>
+    <string name="open_activity_7">Open Activity 7</string>
+    <string name="activity_one">Activity One</string>
+    <string name="activity_two">Activity Two</string>
+    <string name="activity_three">Activity Three</string>
+    <string name="activity_four">Activity Four</string>
+    <string name="activity_five">Activity Five</string>
+    <string name="activity_six">Activity Six</string>
+    <string name="enter_some_text">Enter some text</string>
+    <string name="request_permission">Request Permission</string>
+    <string name="show_dialog">Show dialog</string>
+</resources>

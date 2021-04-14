@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JobIntentServiceDemo</string>
+    <string name="enter_some_text">Enter some text</string>
+    <string name="enqueue_work">Enqueue Work</string>
+</resources>

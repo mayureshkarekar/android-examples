@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ServiceDemo</string>
+    <string name="background_service_started">Background service started.</string>
+    <string name="background_service_stopped">Background service stopped.</string>
+    <string name="bind_service">Bind Service</string>
+    <string name="counter_value_value">Counter value: %s</string>
+    <string name="foreground_service_started">Foreground service started.</string>
+    <string name="foreground_service_stopped">Foreground service stopped.</string>
+    <string name="service_bound">Service bound.</string>
+    <string name="service_not_bound">Service not bound.</string>
+    <string name="service_unbound">Service unbound.</string>
+    <string name="start_bg_service">Start BG Service</string>
+    <string name="start_fg_service">Start FG Service</string>
+    <string name="stop_bg_service">Stop BG Service</string>
+    <string name="stop_fg_service">Stop FG Service</string>
+    <string name="unbind_service">Unbind Service</string>
+</resources>

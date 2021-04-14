@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ContentProviderClient</string>
+    <string name="id">ID</string>
+    <string name="name">Name</string>
+    <string name="city">City</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="search_by_id">Search by ID</string>
+    <string name="show_all">Show all</string>
+    <string name="student_list_is_empty">Student list is empty.</string>
+    <string name="student_added_successfully">Student added successfully.</string>
+    <string name="student_deleted_successfully">Student deleted successfully.</string>
+    <string name="student_details_updated_successfully">Student details updated successfully.</string>
+    <string name="failed_to_add_student">Failed to add student.</string>
+    <string name="failed_to_delete_student">Failed to delete student.</string>
+    <string name="failed_to_update_student_details">Failed to update student details.</string>
+    <string name="enter_all_the_details">Enter all the details.</string>
+    <string name="enter_name_and_city">Enter name and city.</string>
+    <string name="enter_id">Enter ID.</string>
+</resources>

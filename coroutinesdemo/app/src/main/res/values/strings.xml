@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CoroutinesDemo</string>
+    <string name="data_fetched_successfully">Data fetched successfully. Last updated on %s</string>
+    <string name="do_fake_api_call">Do Fake API Call</string>
+    <string name="fetching_details">Fetching details</string>
+    <string name="no_api_calls">No API Calls.</string>
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DatabaseDemo</string>
+    <string name="add">Add</string>
+    <string name="all_fields_are_compulsory">All fields are compulsory.</string>
+    <string name="delete">Delete</string>
+    <string name="deleted_all">Deleted all.</string>
+    <string name="employee">Employee</string>
+    <string name="enter_id">Enter ID.</string>
+    <string name="enter_name">Enter name.</string>
+    <string name="fetch">Fetch</string>
+    <string name="id">ID</string>
+    <string name="name">Name</string>
+    <string name="operation_failed">Operation failed.</string>
+    <string name="record_added">Record %s added.</string>
+    <string name="record_deleted">%s records deleted.</string>
+    <string name="record_updated">%s records updated.</string>
+    <string name="room">Room</string>
+    <string name="sqlite">SQLite</string>
+    <string name="student">Student</string>
+    <string name="update">Update</string>
+</resources>

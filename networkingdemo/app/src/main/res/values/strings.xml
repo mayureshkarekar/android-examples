@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NetworkingDemo</string>
+    <string name="networking_api">Networking API</string>
+    <string name="http_url_connection">HttpURLConnection</string>
+    <string name="volley">Volley</string>
+    <string name="retrofit">Retrofit</string>
+    <string name="students">Students</string>
+    <string name="all">All</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="delhi">Delhi</string>
+    <string name="mumbai">Mumbai</string>
+    <string name="banglore">Banglore</string>
+    <string name="failed_to_fetch_data">Failed to fetch data.</string>
+    <string name="no_students">No students.</string>
+    <string name="operation_failed">Operation failed.</string>
+</resources>

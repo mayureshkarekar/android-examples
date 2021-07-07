@@ -1,0 +1,30 @@
+buildscript {
+    ext.kotlin_version = "1.5.20"
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        def nav_version = "2.3.5"
+
+        // SafeArgs Plugin Classpath
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath 'com.android.tools.build:gradle:4.2.2'
+
+        //noinspection DifferentKotlinGradleVersion
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

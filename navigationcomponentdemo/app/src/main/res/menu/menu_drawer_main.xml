@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- NOTE: Match item ID with destination ID if you want to handle option item clicks using
+    NavController. -->
+    <item
+        android:id="@+id/destHomeFragment"
+        android:icon="@drawable/ic_home_24"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/destNotificationsFragment"
+        android:icon="@drawable/ic_notification_24"
+        android:title="@string/notifications" />
+
+    <item
+        android:id="@+id/destSettingsFragment"
+        android:icon="@drawable/ic_settings_24"
+        android:title="@string/settings" />
+
+    <item android:title="@string/info">
+        <menu>
+            <item
+                android:id="@+id/destAboutFragment"
+                android:icon="@drawable/ic_info_24"
+                android:title="@string/about" />
+        </menu>
+    </item>
+
+</menu>

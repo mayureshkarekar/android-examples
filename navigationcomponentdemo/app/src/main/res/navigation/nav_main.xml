@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/destHomeFragment">
+
+    <!-- Fragment destinations. -->
+    <fragment
+        android:id="@+id/destHomeFragment"
+        android:name="com.example.navigationcomponentdemo.fragment.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_destHomeFragment_to_destSendMoneyFragment"
+            app:destination="@id/destSendMoneyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_destHomeFragment_to_destBalanceFragment"
+            app:destination="@id/destBalanceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_destHomeFragment_to_destTransactionsFragment"
+            app:destination="@id/destTransactionsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destSettingsFragment"
+        android:name="com.example.navigationcomponentdemo.fragment.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/destSendMoneyFragment"
+        android:name="com.example.navigationcomponentdemo.fragment.SendMoneyFragment"
+        android:label="@string/send_money"
+        tools:layout="@layout/fragment_send_money">
+
+        <action
+            android:id="@+id/action_destSendMoneyFragment_to_sendMoneyToRecipientFragment"
+            app:destination="@id/destSendMoneyToRecipientFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destTransactionsFragment"
+        android:name="com.example.navigationcomponentdemo.fragment.TransactionsFragment"
+        android:label="@string/transactions"
+        tools:layout="@layout/fragment_transactions" />
+
+    <fragment
+        android:id="@+id/destBalanceFragment"
+        android:name="com.example.navigationcomponentdemo.fragment.BalanceFragment"
+        android:label="@string/balance"
+        tools:layout="@layout/fragment_balance" />
+
+    <fragment
+        android:id="@+id/destSendMoneyToRecipientFragment"
+        android:name="com.example.navigationcomponentdemo.fragment.SendMoneyToRecipientFragment"
+        android:label="@string/send_money_to_arg"
+        tools:layout="@layout/fragment_send_money_to_recipient">
+
+        <argument
+            android:name="recipientName"
+            android:defaultValue="No name"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_destSendMoneyToRecipientFragment_to_sendMoneyConfirmationDialogFragment"
+            app:destination="@id/destSendMoneyConfirmationDialogFragment" />
+
+        <action
+            android:id="@+id/action_destSendMoneyToRecipientFragment_to_destHomeFragment"
+            app:destination="@id/destHomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/destHomeFragment"
+            app:popUpToInclusive="true" />
+
+        <!-- Deeplink to destination. -->
+        <deepLink
+            android:id="@+id/deepLinkSendMoneyToRecipientFragment"
+            app:uri="https://navcomps.example.com/{recipientName}" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destNotificationsFragment"
+        android:name="com.example.navigationcomponentdemo.fragment.NotificationsFragment"
+        android:label="@string/notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/destAboutFragment"
+        android:name="com.example.navigationcomponentdemo.fragment.AboutFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/destLoginFragment"
+        android:name="com.example.navigationcomponentdemo.fragment.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/destProfileFragment"
+        android:name="com.example.navigationcomponentdemo.fragment.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <!-- Dialog destination. -->
+    <dialog
+        android:id="@+id/destSendMoneyConfirmationDialogFragment"
+        android:name="com.example.navigationcomponentdemo.fragment.SendMoneyConfirmationDialogFragment"
+        android:label="dialog_send_money_confirmation"
+        tools:layout="@layout/dialog_send_money_confirmation">
+
+        <argument
+            android:name="recipientName"
+            app:argType="string" />
+
+        <argument
+            android:name="amount"
+            app:argType="float" />
+
+    </dialog>
+
+    <!-- Global action. -->
+    <action
+        android:id="@+id/action_global_destAboutFragment"
+        app:destination="@id/destAboutFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+</navigation>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WorkManagerDemo</string>
+    <string name="cancel_chained_work">Cancel chained work</string>
+    <string name="cancel_one_time_work">Cancel one time work</string>
+    <string name="cancel_periodic_work">Cancel periodic work</string>
+    <string name="request_enqueued">Request enqueued.</string>
+    <string name="start_chained_work">Start chained work</string>
+    <string name="start_one_time_work">Start one time work</string>
+    <string name="start_periodic_work">Start periodic work</string>
+    <string name="work_cancelled">Work cancelled.</string>
+</resources>

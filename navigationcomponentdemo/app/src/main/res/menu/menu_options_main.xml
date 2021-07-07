@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- NOTE: Match item ID with destination ID if you want to handle option item clicks using
+    NavController. -->
+    <item
+        android:id="@+id/destSettingsFragment"
+        android:icon="@drawable/ic_settings_24"
+        android:menuCategory="secondary"
+        android:title="@string/settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/destProfileFragment"
+        android:icon="@drawable/ic_person_24"
+        android:menuCategory="secondary"
+        android:title="@string/profile"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@drawable/ic_info_24"
+        android:menuCategory="secondary"
+        android:title="@string/about"
+        app:showAsAction="ifRoom" />
+
+</menu>

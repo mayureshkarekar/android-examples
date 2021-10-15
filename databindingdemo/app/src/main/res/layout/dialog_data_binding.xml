@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <!-- Defining the variables in data binding layout. UI will be updated automatically everytime
+        variable's data changes. -->
+        <variable
+            name="quote"
+            type="com.example.databindingdemo.Quote" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/iv_close_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_close_24" />
+
+        <!-- Setting the text using data binding. -->
+        <TextView
+            android:id="@+id/tv_quote_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{quote.quoteText}"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+
+        <!-- Setting the text using data binding. -->
+        <TextView
+            android:id="@+id/tv_quote_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{quote.author}"
+            android:textAlignment="viewEnd"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:text="- Lorem Ipsum" />
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Wrap the layout inside "layout" tag to convert the layout to data binding layout. -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <!-- Defining the variables in data binding layout. UI will be updated automatically everytime
+        variable's data changes. -->
+        <variable
+            name="quote"
+            type="com.example.databindingdemo.Quote" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".BindingAdapterActivity">
+
+        <!-- Using custom attribute (Binding Adapter) to load the image. -->
+        <ImageView
+            android:id="@+id/iv_image"
+            imageUrl="@{quote.imageUrl}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <!-- Setting the text using data binding. -->
+        <TextView
+            android:id="@+id/tv_quote_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:text="@{quote.quoteText}"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+
+        <!-- Setting the text using data binding. -->
+        <TextView
+            android:id="@+id/tv_quote_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:text="@{quote.author}"
+            android:textAlignment="viewEnd"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tv_quote_text"
+            tools:text="- Lorem Ipsum" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

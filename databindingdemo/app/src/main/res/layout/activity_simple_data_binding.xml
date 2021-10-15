@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <!-- Defining the variables in data binding layout. UI will be updated automatically everytime
+        variable's data changes. -->
+        <!--<variable
+            name="quote"
+            type="com.example.databindingdemo.Quote" />-->
+
+        <variable
+            name="quotesViewModel"
+            type="com.example.databindingdemo.QuotesViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".SimpleDataBindingActivity">
+
+        <!-- String resource concatenation with data binding. -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{@string/current_username_value(quotesViewModel.currentUsername)}"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/design_default_color_primary"
+            tools:text="Current username: Robert" />
+
+        <!-- Two ways data binding. (ViewModel to Layout and Layout to ViewModel) -->
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/enter_username"
+            android:inputType="textPersonName"
+            android:text="@={quotesViewModel.currentUsername}" />
+
+        <!-- One ways data binding. (ViewModel to Layout) -->
+        <TextView
+            android:id="@+id/tv_quote_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@{quotesViewModel.quoteLiveData.quoteText}"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+
+        <!-- Setting the text using data binding. -->
+        <TextView
+            android:id="@+id/tv_quote_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{quotesViewModel.quoteLiveData.author}"
+            android:textAlignment="viewEnd"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:text="- Lorem Ipsum" />
+
+        <!-- Setting the text using data binding. -->
+        <Button
+            android:id="@+id/btn_next_quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> quotesViewModel.nextQuote()}"
+            android:text="@string/next_quote" />
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <!-- Defining the variables in data binding layout. UI will be updated automatically everytime
+        variable's data changes. -->
+        <variable
+            name="quote"
+            type="com.example.databindingdemo.Quote" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp">
+
+        <!-- Using multiple custom attributes (Binding Adapter) to load the image/error image. -->
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:errorImage="@{@drawable/ic_image_24}"
+            android:imageUrl="@{quote.imageUrl}"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <!-- Setting the text using data binding. -->
+        <TextView
+            android:id="@+id/tv_quote_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:maxLines="2"
+            android:text="@{quote.quoteText}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_image"
+            app:layout_constraintTop_toTopOf="@id/iv_image"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+
+        <!-- Setting the text using data binding. -->
+        <TextView
+            android:id="@+id/tv_quote_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@{quote.author.equalsIgnoreCase(`unknown`) ? `Anonymous` : quote.author}"
+            app:layout_constraintStart_toEndOf="@id/iv_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_quote_text"
+            tools:text="- Lorem Ipsum" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

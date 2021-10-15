@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DataBindingDemo</string>
+    <string name="current_username_value">Current username: %s</string>
+    <string name="enter_username">Enter username</string>
+    <string name="next_quote">Next Quote</string>
+    <string name="open_binding_adapter_activity">Open Binding Adapter Activity</string>
+    <string name="open_fragment_data_binding_activity">Open Fragment Data Binding Activity</string>
+    <string name="open_list_data_binding_activity">Open List Data Binding Activity</string>
+    <string name="open_simple_data_binding_activity">Open Simple Data Binding Activity</string>
+    <string name="open_dialog">Open Dialog</string>
+</resources>

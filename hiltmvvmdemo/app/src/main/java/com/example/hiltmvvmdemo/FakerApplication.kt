@@ -1,0 +1,7 @@
+package com.example.hiltmvvmdemo
+
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class FakerApplication : Application()

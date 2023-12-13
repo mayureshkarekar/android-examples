@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HiltDemo</string>
+    <string name="this_is_main_fragment">This is main fragment.</string>
+</resources>
